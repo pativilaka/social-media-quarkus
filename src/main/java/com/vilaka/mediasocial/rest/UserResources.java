@@ -18,13 +18,13 @@ import java.util.Set;
 @Path("/users")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class UserResource {
+public class UserResources {
 
     private UserRepository repository;
     private Validator validator;
 
     @Inject
-    public UserResource(UserRepository repository, Validator validator){
+    public UserResources(UserRepository repository, Validator validator){
         this.repository = repository;
         this.validator = validator;
     }
@@ -73,6 +73,13 @@ public class UserResource {
     @Path("{id}")
     @Transactional
     public Response updateUser(@PathParam("id") Long id, UserRequest dto){
+
+        Set<ConstraintViolation<UserRequest>> violations = validator.validate(dto);
+
+        if(!violations.isEmpty()){
+            return ResponseError.createErrorFromValidation(violations)
+                    .withStatusCode(ResponseError.UNPROCESSABLE_ENTITY_STATUS);
+        }
 
         User user = repository.findById(id);
 
