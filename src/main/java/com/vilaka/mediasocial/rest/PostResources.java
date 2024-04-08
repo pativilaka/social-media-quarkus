@@ -2,6 +2,7 @@ package com.vilaka.mediasocial.rest;
 
 import com.vilaka.mediasocial.domain.User;
 import com.vilaka.mediasocial.domain.entities.Post;
+import com.vilaka.mediasocial.domain.repositories.FollowerRepository;
 import com.vilaka.mediasocial.domain.repositories.PostRepository;
 import com.vilaka.mediasocial.domain.repositories.UserRepository;
 import com.vilaka.mediasocial.rest.dto.PostRequest;
@@ -24,11 +25,14 @@ public class PostResources {
 
     private UserRepository userRepository;
     private PostRepository postRepository;
+    private FollowerRepository followerRepository;
 
     @Inject
-    public PostResources(UserRepository userRepository, PostRepository postRepository) {
+    public PostResources(UserRepository userRepository, PostRepository postRepository,
+                         FollowerRepository followerRepository) {
         this.userRepository = userRepository;
         this.postRepository = postRepository;
+        this.followerRepository = followerRepository;
     }
 
     @POST
@@ -50,11 +54,30 @@ public class PostResources {
     }
 
     @GET
-    public Response listPosts(@PathParam("userId") Long userId){
+    public Response listPosts(@PathParam("userId") Long userId,
+                              @HeaderParam("followerId") Long followerId){
 
         User user = userRepository.findById(userId);
         if (user == null){
             return Response.status(Response.Status.NOT_FOUND).build();
+        }
+
+        if (followerId == null){
+            return Response.status(Response.Status.BAD_REQUEST)
+                    .entity("FollowId is requerid in header.")
+                    .build();
+        }
+
+        User follower = userRepository.findById(followerId);
+        if (follower == null){
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+
+        boolean follows = followerRepository.follows(follower, user);
+        if(!follows){
+            return Response.status(Response.Status.FORBIDDEN)
+                    .entity("You must to follow this user to see his post!")
+                    .build();
         }
 
         PanacheQuery<Post> query = postRepository
