@@ -25,7 +25,7 @@ A seguir, uma visão geral das principais funcionalidades:
 
 # Diagrama de Classe
 
-![class-diagram](C:\projetos-versionados\social-media-quarkus\img\class-diagram.png)
+![](https://github.com/pativilaka/social-media-quarkus/blob/main/img/class-diagram.png)
 
 
 
