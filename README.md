@@ -1,73 +1,60 @@
-# social-media-quarkus
+# Introdução à Aplicação de Rede Social Simples
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+É uma plataforma de redes sociais simplificada, que permite aos usuários se seguirem, compartilharem postagens e interagirem com o conteúdo de outros usuários.
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+A aplicação utiliza recursos RESTful para fornecer endpoints para interações básicas, como criar usuários, seguir outros usuários, listar seguidores, listar postagens de usuários seguidos e criar postagens.
 
-## Running the application in dev mode
+A seguir, uma visão geral das principais funcionalidades:
 
-You can run your application in dev mode that enables live coding using:
-```shell script
-./mvnw compile quarkus:dev
-```
+1. **Usuários (Users):**
+   - Criar, atualizar e excluir usuários.
+   - Listar todos os usuários e recuperar um usuário por ID.
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+2. **Seguidores (Followers):**
+   - Seguir e deixar de seguir outros usuários.
+   - Listar os seguidores de um usuário específico.
 
-## Packaging and running the application
+3. **Postagens (Posts):**
+   - Criar, listar e excluir postagens.
+   - Listar postagens de usuários seguidos.
 
-The application can be packaged using:
-```shell script
-./mvnw package
-```
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
+# Tecnologias Utilizadas
 
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
+Nesta aplicação foram empregadas diversas tecnologias para o desenvolvimento e funcionamento adequado. Abaixo estão algumas das principais:
 
-If you want to build an _über-jar_, execute the following command:
-```shell script
-./mvnw package -Dquarkus.package.type=uber-jar
-```
+## Linguagens de Programação
 
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
+- Java: Utilizado como linguagem principal de programação.
+- SQL: Para consultas e manipulação de dados no banco de dados.
 
-## Creating a native executable
+## Frameworks e Bibliotecas
 
-You can create a native executable using: 
-```shell script
-./mvnw package -Dnative
-```
+- Jakarta EE: Framework utilizado para o desenvolvimento de aplicativos corporativos em Java.
+- JPA (Java Persistence API): Para mapeamento objeto-relacional e persistência de dados.
+- Hibernate: Implementação JPA utilizada para interação com o banco de dados.
+- Jakarta RESTful Web Services: Framework utilizado para construção de APIs RESTful em Java.
+- JAX-RS: Especificação utilizada para desenvolvimento de serviços web RESTful.
+- Hibernate Validator: Utilizado para validação de dados nas classes de entidade.
+- Panache: Extensão do Hibernate para simplificar o desenvolvimento de repositórios de dados.
+- Jakarta Bean Validation: Utilizado para validação de dados nas requisições REST.
+- Jakarta Contexts and Dependency Injection (CDI): Para injeção de dependência e gerenciamento de contexto.
 
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
-```shell script
-./mvnw package -Dnative -Dquarkus.native.container-build=true
-```
+## Ferramentas e Bibliotecas de Desenvolvimento
 
-You can then execute your native executable with: `./target/social-media-quarkus-1.0.0-SNAPSHOT-runner`
+- Maven: Ferramenta de gerenciamento de dependências e construção de projetos.
+- Git: Sistema de controle de versão utilizado para colaboração e gerenciamento de código-fonte.
+- GitHub: Plataforma utilizada para hospedagem de repositórios Git.
+- IntelliJ IDEA: Ambiente de desenvolvimento integrado (IDE) utilizado para desenvolvimento Java.
 
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.
+## Banco de Dados
 
-## Related Guides
+- PostgreSQL: Sistema de gerenciamento de banco de dados relacional utilizado para armazenamento dos dados da aplicação.
 
-- Hibernate ORM ([guide](https://quarkus.io/guides/hibernate-orm)): Define your persistent model with Hibernate ORM and Jakarta Persistence
-- JDBC Driver - H2 ([guide](https://quarkus.io/guides/datasource)): Connect to the H2 database via JDBC
-- Hibernate Validator ([guide](https://quarkus.io/guides/validation)): Validate object properties (field, getter) and method parameters for your beans (REST, CDI, Jakarta Persistence)
-- RESTEasy Classic JSON-B ([guide](https://quarkus.io/guides/rest-json)): JSON-B serialization support for RESTEasy Classic
-- Hibernate ORM with Panache ([guide](https://quarkus.io/guides/hibernate-orm-panache)): Simplify your persistence code for Hibernate ORM via the active record or the repository pattern
+## Outras Tecnologias
 
-## Provided Code
+- RESTful: Arquitetura utilizada para construção de APIs web que se baseiam no protocolo HTTP.
 
-### Hibernate ORM
+# Contato
 
-Create your first JPA entity
+[Linkedin ](https://www.linkedin.com/in/pativilaka/)
 
-[Related guide section...](https://quarkus.io/guides/hibernate-orm)
-
-[Related Hibernate with Panache section...](https://quarkus.io/guides/hibernate-orm-panache)
-
-
-### RESTEasy JAX-RS
-
-Easily start your RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
