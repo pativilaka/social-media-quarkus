@@ -38,6 +38,7 @@ Nesta aplicação foram empregadas diversas tecnologias para o desenvolvimento e
 - Panache: Extensão do Hibernate para simplificar o desenvolvimento de repositórios de dados.
 - Jakarta Bean Validation: Utilizado para validação de dados nas requisições REST.
 - Jakarta Contexts and Dependency Injection (CDI): Para injeção de dependência e gerenciamento de contexto.
+- Quarkus Supersonic Subatomic Java: Uma pilha Java nativa do Kubernetes adaptada para OpenJDK HotSpot e GraalVM.
 
 ## Ferramentas e Bibliotecas de Desenvolvimento
 
