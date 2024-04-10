@@ -1,4 +1,4 @@
-# Introdução à Aplicação de Rede Social Simples
+# Aplicação de Rede Social Simples
 
 É uma plataforma de redes sociais simplificada, que permite aos usuários se seguirem, compartilharem postagens e interagirem com o conteúdo de outros usuários.
 
@@ -11,12 +11,22 @@ A seguir, uma visão geral das principais funcionalidades:
    - Listar todos os usuários e recuperar um usuário por ID.
 
 2. **Seguidores (Followers):**
+   
    - Seguir e deixar de seguir outros usuários.
    - Listar os seguidores de um usuário específico.
-
+   
 3. **Postagens (Posts):**
    - Criar, listar e excluir postagens.
+   
    - Listar postagens de usuários seguidos.
+   
+     
+
+# Diagrama de Classe
+
+![Diagrama de Classe](C:\Users\Pati\Pictures\read\uml-rede-socil.png)
+
+
 
 # Tecnologias Utilizadas
 
@@ -55,7 +65,8 @@ Nesta aplicação foram empregadas diversas tecnologias para o desenvolvimento e
 
 - RESTful: Arquitetura utilizada para construção de APIs web que se baseiam no protocolo HTTP.
 
+  
+
 # Contato
 
 [Linkedin ](https://www.linkedin.com/in/pativilaka/)
-
