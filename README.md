@@ -16,6 +16,7 @@ A seguir, uma visão geral das principais funcionalidades:
    - Listar os seguidores de um usuário específico.
    
 3. **Postagens (Posts):**
+   
    - Criar, listar e excluir postagens.
    
    - Listar postagens de usuários seguidos.
@@ -24,7 +25,7 @@ A seguir, uma visão geral das principais funcionalidades:
 
 # Diagrama de Classe
 
-![Diagrama de Classe](C:\Users\Pati\Pictures\read\uml-rede-socil.png)
+![Diagrama de Classe](C:\projetos-versionados\social-media-quarkus\img\class-diagram.png)
 
 
 
