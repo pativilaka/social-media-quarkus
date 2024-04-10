@@ -1,7 +1,8 @@
 package com.vilaka.mediasocial.rest;
 
-import com.vilaka.mediasocial.domain.User;
+
 import com.vilaka.mediasocial.domain.entities.Follower;
+import com.vilaka.mediasocial.domain.entities.User;
 import com.vilaka.mediasocial.domain.repositories.FollowerRepository;
 import com.vilaka.mediasocial.domain.repositories.UserRepository;
 import com.vilaka.mediasocial.rest.dto.FollowerRequest;

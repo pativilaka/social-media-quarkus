@@ -1,6 +1,5 @@
-package com.vilaka.mediasocial.domain;
+package com.vilaka.mediasocial.domain.entities;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;
 import lombok.Data;
 

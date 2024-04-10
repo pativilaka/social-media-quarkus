@@ -1,13 +1,12 @@
 package com.vilaka.mediasocial.domain.repositories;
 
-import com.vilaka.mediasocial.domain.User;
 import com.vilaka.mediasocial.domain.entities.Follower;
+import com.vilaka.mediasocial.domain.entities.User;
 import io.quarkus.hibernate.orm.panache.PanacheQuery;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 import io.quarkus.panache.common.Parameters;
 import jakarta.enterprise.context.ApplicationScoped;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;

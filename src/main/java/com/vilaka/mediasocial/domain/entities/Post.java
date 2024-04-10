@@ -1,10 +1,9 @@
 package com.vilaka.mediasocial.domain.entities;
 
-import com.vilaka.mediasocial.domain.User;
+
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity

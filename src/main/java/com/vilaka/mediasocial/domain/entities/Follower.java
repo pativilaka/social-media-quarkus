@@ -1,6 +1,5 @@
 package com.vilaka.mediasocial.domain.entities;
 
-import com.vilaka.mediasocial.domain.User;
 import jakarta.persistence.*;
 import lombok.Data;
 
